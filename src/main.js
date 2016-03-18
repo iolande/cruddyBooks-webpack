@@ -7,6 +7,7 @@ import '../styles/styles.css';
 bootstrap(function(aurelia) {
   aurelia.use
     .standardConfiguration()
+    .feature('resources/elements')
     .developmentLogging();
 
   aurelia.start().then(() => aurelia.setRoot('app', document.body));
