@@ -1,4 +1,6 @@
 //import {computedFrom} from 'aurelia-framework';
+import './welcome.css';
+import './welcome.scss';
 
 export class Welcome {
   heading = 'Welcome to the Aurelia Navigation App';
