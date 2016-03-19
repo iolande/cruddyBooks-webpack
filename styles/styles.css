@@ -41,10 +41,6 @@
   }
 }
 
-section {
-  margin: 0 20px;
-}
-
 /* animate page transitions */
 section.au-enter-active {
   -webkit-animation: fadeInRight 1s;
