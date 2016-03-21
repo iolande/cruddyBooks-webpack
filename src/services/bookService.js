@@ -1,5 +1,5 @@
 import {inject} from 'aurelia-framework';
-import {HttpClient} from 'aurelia-fetch-client';
+import {json, HttpClient} from 'aurelia-fetch-client';
 import 'isomorphic-fetch';
 
 @inject(HttpClient)
@@ -19,26 +19,19 @@ export class BookService {
       .catch(this.serviceError);
   }
 
-  // TODO: change this to the correct format for fetch
-  // getBooksByGenre(genre) {
-  //   return this.httpClient.createRequest('books')
-  //       .asGet()
-  //       .withParams({
-  //         genre: genre
-  //       })
-  //     .send()
+  getBooksByGenre(genre) {
+    return this.httpClient.fetch(`books?genre=${genre}`)
+      .then(response => response.json())
+      .catch(this.serviceError);
+  }
+
+  // postBook(data) {
+  //   return this.httpClient.fetch('books', {
+  //       method: 'POST',
+  //       body: json(data)
+  //     })
   //     .then(response => response.json())
   //     .catch(this.serviceError);
-  // }
-
-  // TODO: change this to the correct format for fetch
-  // postBook(data) {
-  //   const content = JSON.stringify(data);
-
-  //   return this.httpClient.createRequest('books')
-  //     .asPost()
-  //     .withContent(content)
-  //     .send();
   // }
 
   serviceError(response) {
