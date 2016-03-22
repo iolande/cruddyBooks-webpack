@@ -8,6 +8,7 @@ bootstrap(function(aurelia) {
   aurelia.use
     .standardConfiguration()
     .feature('resources/elements')
+    .feature('resources/composites')
     .developmentLogging();
 
   aurelia.start().then(() => aurelia.setRoot('app', document.body));
