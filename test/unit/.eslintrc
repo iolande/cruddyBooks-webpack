@@ -1,8 +1,4 @@
 {
-  "parser": "babel-eslint",
-  "ecmaFeatures": {
-      "modules": true
-  },
   "rules": {
     "no-var": 0
   }
