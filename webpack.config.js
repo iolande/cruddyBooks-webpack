@@ -19,13 +19,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new AureliaWebpackPlugin(),
-    new ProvidePlugin({
-      Promise: 'bluebird',
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery' // this doesn't expose jQuery property for window, but expose it to every module
-    })
+    new AureliaWebpackPlugin()
   ],
   module: {
     loaders: [

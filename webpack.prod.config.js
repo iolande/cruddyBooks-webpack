@@ -25,12 +25,6 @@ module.exports = {
       title: 'Aurelia webpack skeleton - ' + pkg.version,
       template: 'index.prod.html',
       filename: 'index.html'
-    }),
-    new ProvidePlugin({
-      Promise: 'bluebird',
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery' // this doesn't expose jQuery property for window, but expose it to every module
     })
   ],
   resolve: {
